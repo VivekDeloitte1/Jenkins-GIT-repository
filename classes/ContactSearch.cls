@@ -11,6 +11,7 @@ public class ContactSearch
 
     public PageReference searchContacts()
     {
+	system.debug('--------->');
         contacts = [select Id
                           ,Name
                           ,MailingState 
@@ -19,4 +20,5 @@ public class ContactSearch
                     and MailingState = :mailingState];
         return null;
     }
+	
 }
